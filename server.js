@@ -1,6 +1,5 @@
-// server.js
 import Fastify from 'fastify';
-import userRouter from './routes/user.js';  // Import as default
+import userRouter from './routes/user.js';  
 import { connectDB } from "./config/database.js";
 import dotenv from 'dotenv';
 dotenv.config();
@@ -10,7 +9,7 @@ const fastify = Fastify({
 });
 connectDB();  
 const registerRoutes = () => {
-    fastify.register(userRouter); // Register user routes
+    fastify.register(userRouter); 
 };
 
 const startServer = async () => {
